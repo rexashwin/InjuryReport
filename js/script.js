@@ -8,13 +8,17 @@ document.getElementById('injuryForm').addEventListener('submit', function (e) {
     const village = document.getElementById('village').value;
     const examinationTime = document.getElementById('examinationTime').value;
     const examinationDate = document.getElementById('examinationDate').value;
-    const injuryDetails = document.getElementById('injuryDetails').value;
+    const demandedDate = document.getElementById('demandedDate').value;
+    const injuryDetailsFirst = document.getElementById('injuryDetailsFirst').value;
+    const injuryDetailsSecond = document.getElementById('injuryDetailsSecond').value;
     const ageOfInjury = document.getElementById('ageOfInjury').value;
     const opinion = document.getElementById('opinion').value;
     const moi = document.getElementById('moi').value;
     const enclosure = document.getElementById('enclosure').value;
     const regNo = document.getElementById('regNo').value;
     const footerDate = document.getElementById('footerDate').value;
+    const doctorName = document.getElementById('doctorName').value;
+    const mobile = document.getElementById('mobile').value;
 
     const letterContent = `
         <h1>Final Injury Report</h1>
@@ -24,9 +28,9 @@ document.getElementById('injuryForm').addEventListener('submit', function (e) {
         <p>This is to certify that ${name} S/o ${fatherName} age ${age} Yrs/Male,</p>
         <p>R/O-Village- ${village}, P.S-chand.dist- Kaimur has been examined by</p>
         <p>me at ${examinationTime} on ${examinationDate} and further injury report was</p>
-        <p>demanded by S.I. p.s Chand on 10/07/2024 injury details are as</p>
-        <p>follows-</p>
-        <p>1. ${injuryDetails}</p>
+        <p>demanded by S.I. p.s Chand on ${demandedDate} injury details are as follows-</p>
+        <p>1. ${injuryDetailsFirst}</p>
+        <p>2. ${injuryDetailsSecond}</p>
         <p><b>Age of injury-</b> ${ageOfInjury}</p>
         <p><b>Opinion-</b> ${opinion}</p>
         <p><b>M.O.I.-</b> ${moi}</p>
@@ -37,9 +41,9 @@ document.getElementById('injuryForm').addEventListener('submit', function (e) {
             <p>Date- ${footerDate}</p>
         </div>
         <div class="complimentary-close">
-            <p>Dr. MD.ILTAF ANSARI</p>
+            <p>Dr. ${doctorName}</p>
             <p>MO, CHC CHAND</p>
-            <p>МО-9308334866</p>
+            <p>Мob:${mobile}</p>
         </div>
     `;
 

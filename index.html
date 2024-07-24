@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="RexAshwin" />
-    <title>Printable Injury Report</title>
+    <title>Injury Report Generator</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Final Injury Report</h1>
-      <h2>C/O-Physical assault</h2>
+      <h1>Injury Report Generator</h1>
 
       <div class="letter-content">
         <form id="injuryForm">
@@ -92,10 +91,29 @@
             />
           </div>
           <div class="form-group">
-            <label for="injuryDetails">Injury Details:</label>
+            <label for="demandedDate">Demanded Date:</label>
+            <input
+              type="date"
+              id="demandedDate"
+              name="demandedDate"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="injuryDetailsFirst">First Injury Details:</label>
             <textarea
-              id="injuryDetails"
-              name="injuryDetails"
+              id="injuryDetailsFirst"
+              name="injuryDetailsFirst"
+              rows="4"
+              placeholder="Enter injury details here"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="injuryDetailsSecond">Second Injury Details:</label>
+            <textarea
+              id="injuryDetailsSecond"
+              name="injuryDetailsSecond"
               rows="4"
               placeholder="Enter injury details here"
               required
@@ -161,6 +179,26 @@
               Date:
               <input type="date" id="footerDate" name="footerDate" required />
             </p>
+          </div>
+          <div class="form-group">
+            <label for="doctorName">Doctor's Name:</label>
+            <input
+              type="text"
+              id="doctorName"
+              name="doctorName"
+              placeholder="Doctor's Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile No.:</label>
+            <input
+              type="number"
+              id="mobile"
+              name="mobile"
+              placeholder="Mobile Number"
+              required
+            />
           </div>
           <div class="print-btn">
             <button type="submit">Generate Letter</button>
